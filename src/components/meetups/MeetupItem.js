@@ -9,9 +9,9 @@ function MeetupItem(props) {
 
   const itemIsFavorite = favoritesCtx.itemIsFavorite(props.id);
 
-  function toggleFaviriteStatesHandler() {
+  function toggleFavoriteStatusHandler() {
     if (itemIsFavorite) {
-      favoritesCtx.removeFavirite(props.id);
+      favoritesCtx.removeFavorite(props.id);
     } else {
       favoritesCtx.addFavorite({
         id: props.id,
@@ -35,8 +35,8 @@ function MeetupItem(props) {
           <p>{props.description}</p>
         </div>
         <div className={classes.actions}>
-          <button onClick={toggleFaviriteStatesHandler}>
-            {itemIsFavorite ? "Remove from Favirites" : "To Favorites"}
+          <button onClick={toggleFavoriteStatusHandler}>
+            {itemIsFavorite ? "Remove from Favorites" : "To Favorites"}
           </button>
         </div>
       </Card>

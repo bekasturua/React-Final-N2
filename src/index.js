@@ -11,8 +11,6 @@ ReactDOM.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
-    ,
   </FavoritesContextProvider>,
-
   document.getElementById("root")
 );
